@@ -1,10 +1,18 @@
+<!-- ProjectCard.astro -->
 <div class="bg-blue-800 h-[50%] w-[900px] mx-auto rounded-md border-[1px] mt-8 flex items-center">
     <div class="flex-1 p-4">
-        <p class="text-white font-bold text-ellipsis mb-[23%]"><slot name="descr" /></p>
-        <div class="pt-5">
-            <span class="text-white font-serif bg-lime-700 rounded-md p-2"><slot name="github" /></span>
-            <span class="text-white font-serif bg-lime-700 rounded-md p-2"><slot name="Visitar" /></span>
+      <p class="text-white font-bold text-ellipsis mb-[23%]">
+        <slot name="descr" />
+      </p>
+      <div class="pt-5 flex justify-between items-center">
+        <div>
+          <slot name="github" />
+          <slot name="Visitar" />
         </div>
+        <ul class="flex flex-wrap">
+          <slot name="tags" />
+        </ul>
+      </div>
     </div>
-    <slot name="imgDesc" class="w-[20%] h-[20%] object-cover rounded-r-md" />
-</div>
+    <slot name="imgDesc" />
+  </div>
