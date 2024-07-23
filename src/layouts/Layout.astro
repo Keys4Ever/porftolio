@@ -1,43 +1,55 @@
 ---
 import Footer from '../components/Footer.astro';
 import Nav from '../components/Nav.astro';
+
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<Nav />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</body> 
+<html lang="en" id="home">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Astro description" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="generator" content={Astro.generator} />
+  <title>{title}</title>
+</head>
+<body>
+  <Nav />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</body>
 </html>
-<style is:global>
-	html {
-		font-family: system-ui, sans-serif;
-		background-size: 224px;
-		scroll-behavior: smooth;
-		background-color: #3B3A3B;
-	}
-	main{
-		background-image: url(fondo.svg);
-		background-size: cover;
-  		background-position: center; 
-  		background-repeat: no-repeat; 
-	} 
 
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+    scroll-behavior: smooth;
+    --tw-bg-opacity: 1;
+    --tw-txt-opacity: 1;
+    background-color: rgb(14 16 21/var(--tw-bg-opacity));
+    background-image: url(fondo.svg);
+  }
+  .bg-custom {
+    background-color: #1f2d4099;
+  }
+  .bg-custom-1 {
+    background-color: #1f2d40;
+  }
+  .text-custom {
+    color: rgba(248, 238, 51, 1);
+  }
+  .text-long-custom {
+    color: rgb(253, 253, 194);
+  }
+  .border-custom-1 {
+    border-color: #1f2d40;
+  }
 </style>

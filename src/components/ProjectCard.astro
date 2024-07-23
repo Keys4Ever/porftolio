@@ -1,18 +1,19 @@
-<!-- ProjectCard.astro -->
-<div class="bg-blue-800 h-[50%] w-[900px] mx-auto rounded-md border-[1px] mt-8 flex items-center">
-    <div class="flex-1 p-4">
-      <p class="text-white font-bold text-ellipsis mb-[23%]">
-        <slot name="descr" />
-      </p>
-      <div class="pt-5 flex justify-between items-center">
-        <div>
-          <slot name="github" />
-          <slot name="Visitar" />
-        </div>
-        <ul class="flex flex-wrap">
-          <slot name="tags" />
-        </ul>
-      </div>
+<div class="bg-custom h-auto w-full max-w-4xl mx-auto border-[#1f2d40] rounded-md border-[1px] mt-8 flex flex-col md:flex-row-reverse items-center">
+  <div class="flex-1 p-4">
+    <div class="text-custom font-medium text-ellipsis mb-4 md:mb-[23%] grid grid-cols-1 gap-8">
+      <slot name="title"/>
+      <slot name="descr" class="text-long-custom"/>
     </div>
-    <slot name="imgDesc" />
+    <div class="pt-5 flex justify-between items-center">
+      <div>
+        <slot name="github"/>
+        <slot name="Visitar"/>
+      </div>
+      <ul class="flex flex-wrap">
+        <slot name="tags"/>
+      </ul>
+    </div>
   </div>
+  <slot name="imgDesc"/>
+</div>
+
