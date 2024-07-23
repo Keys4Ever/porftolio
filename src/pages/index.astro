@@ -9,7 +9,7 @@ import Tags from '../components/Tags.astro';
   <!-- Presentación -->
   <section>
     <div class="bg-custom w-full max-w-4xl mt-32 p-8 md:p-16 mb-32 rounded-xl mx-auto text-center border-solid border-[3px] border-[#1f2d40]">
-      <img src="cosito.webp" loading="lazy" class="rounded-full w-24 h-24 md:w-60 md:h-60 mx-auto">
+      <img src="cosito.webp" loading="lazy" alt="Gonzalo Demian Cubilla" class="rounded-full w-[84px] h-24 md:w-60 md:h-60 mx-auto">
       <h1 class="text-custom mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Gonzalo D<span class="text-white">.</span> Cubilla</h1>
       <p class="text-long-custom pt-5 font-bold text-lg md:text-xl p-4 md:p-10">Desktop Developer y estoy estudiando la carrera de Tecnicatura Universitaria en Programación</p>
       <div class="flex flex-col md:flex-row items-center justify-center pb-10 space-y-4 md:space-y-0 md:space-x-4">
@@ -83,14 +83,14 @@ import Tags from '../components/Tags.astro';
       <h1 class="font-bold text-custom pb-10 text-3xl md:text-5xl text-center">Proyectos</h1>
       <ProjectCard>
         <h5 slot="title" class="text-2xl md:text-4xl">Portfolio</h5>
-        <img src="mockup.png" slot="imgDesc" class="w-full md:w-1/2 h-80 object-cover  rounded-md bg-cover mx-auto" />
+        <img src="mockup.png" alt="Gonzalo Demian Cubilla portfolio" slot="imgDesc" class="w-full md:w-1/2 h-80 object-cover  rounded-md bg-cover mx-auto" />
         <span slot="descr" class="text-long-custom">El portfolio, en vacaciones de verano agrego más cosas xd</span>
-        <div slot="tags" class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <ul slot="tags" class="grid grid-cols-2 sm:grid-cols-4 gap-2">
           <Tags>HTML</Tags>
           <Tags>Tailwind CSS</Tags>
           <Tags>Astro 4</Tags>
           <Tags>SQLite</Tags>
-        </div>
+        </ul>
       </ProjectCard>
     </div>
   </section>
