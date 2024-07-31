@@ -96,18 +96,20 @@ import Tags from '../components/Tags.astro';
   <section id="contact" class="bg-custom border-[3px] border-solid border-custom-1 w-full max-w-4xl pt-10 mt-10 mb-20 rounded-xl mx-auto text-center text-custom px-4">
     <h2 class="text-3xl md:text-4xl font-bold mb-5">Contacto</h2>
     <p class="mb-5 text-long-custom">Si tienes alguna pregunta, proyecto o simplemente quieres saludar, no dudes en ponerte en contacto conmigo. Aquí tienes algunas formas en las que puedes hacerlo:</p>
-    <form class="mx-auto w-full max-w-lg" method="POST" action="api/form">
-      <div class="mb-4">
-        <label class="block text-left text-custom font-bold mb-2">Nombre</label>
-        <input class="bg-custom appearance-none border-2 border-[#1f2d40] rounded w-full py-2 px-4 text-long-custom leading-tight focus:border-[#f8ee33]" id="name" name="name" type="text" placeholder="Tu nombre">
-      </div>
+    <form class="mx-auto w-full max-w-lg" action="https://formsubmit.co/ed2481fdcfd4cffb505ba62f6c67941d " method="POST">
+      <input type="hidden" name="_next" value="https://keys4ever.dev">
+      <input type="hidden" name="_captcha" value="false">
       <div class="mb-4">
         <label class="block text-left text-custom font-bold mb-2" for="email">Correo electrónico</label>
-        <input class="bg-custom appearance-none border-2 border-[#1f2d40] rounded w-full py-2 px-4 text-long-custom leading-tight focus:border-[#f8ee33]" id="email" name="email" type="email" placeholder="Tu correo electrónico">
+        <input class="bg-custom appearance-none border-2 border-[#1f2d40] rounded w-full py-2 px-4 text-long-custom leading-tight focus:border-[#f8ee33]" id="email" name="email" type="email" required placeholder="Tu correo electrónico">
+      </div>
+      <div class="mb-4">
+        <label class="block text-left text-custom font-bold mb-2">Asunto</label>
+        <input class="bg-custom appearance-none border-2 border-[#1f2d40] rounded w-full py-2 px-4 text-long-custom leading-tight focus:border-[#f8ee33]" id="name" name="name" type="text" required placeholder="Asunto/Subject">
       </div>
       <div class="mb-6">
         <label class="block text-left text-custom font-bold mb-2" for="message">Mensaje</label>
-        <textarea class="bg-custom appearance-none border-2 border-[#1f2d40] rounded w-full py-2 px-4 text-long-custom leading-tight focus:border-[#f8ee33]" id="message" name="message" rows="5" placeholder="Tu mensaje"></textarea>
+        <textarea class="bg-custom appearance-none border-2 border-[#1f2d40] rounded w-full py-2 px-4 text-long-custom leading-tight focus:border-[#f8ee33]" id="message" name="message" rows="5" required placeholder="Tu mensaje"></textarea>
       </div>
       <div>
         <button class="bg-custom transition-all hover:w-24 hover:bg-[#3b567c] text-white font-bold py-2 px-4 rounded" type="submit">
