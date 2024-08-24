@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Cards from '../components/Cards.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Tags from '../components/Tags.astro';
+import AButton from '../components/AButton.astro';
 ---
 
 <Layout title="Inicio">
@@ -13,14 +14,8 @@ import Tags from '../components/Tags.astro';
       <h1 class="text-custom mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Gonzalo D<span class="text-white">.</span> Cubilla</h1>
       <p class="text-long-custom pt-5 font-bold text-lg md:text-xl p-4 md:p-10">Programador sin un enfoque específico - estoy estudiando la carrera de Tecnicatura Universitaria en Programación</p>
       <div class="flex flex-col md:flex-row items-center justify-center pb-10 space-y-4 md:space-y-0 md:space-x-4">
-        <a href="https://github.com/Keys4Ever" class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-long-custom bg-custom-1 rounded-lg hover:bg-[#3b567c] focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-[#486997] dark:hover:bg-sky-700 dark:focus:ring-sky-800">
-          <img src="/logos/github.png" alt="github brand logo" class="w-5 h-5 mr-2">
-          GitHub
-		</a>
-        <a href="https://wa.me/5491137018186" class="px-3 py-2 text-xs font-medium text-center inline-flex items-center text-long-custom bg-custom-1 rounded-lg hover:bg-[#3b567c] focus:ring-4 focus:outline-none focus:ring-sky-300 dark:bg-[#486997] dark:hover:bg-sky-700 dark:focus:ring-sky-800">
-          <img src="/logos/whatsapp.png" alt="whatsapp brand logo" class="w-5 h-5 mr-2">
-          WhatsApp
-		</a>
+        <AButton src="/logos/github.png" href="https://github.com/Keys4Ever" alt="github brand logo" buttonName="GitHub" />
+        <AButton src="/logos/whatsapp.png" href="https://wa.me/5491137018186" alt="whatsapp brand logo" buttonName="Whatsapp" />
       </div>
     <div class="inline-flex ml-10">
       <input type="text" id="copy" class="px-3 w-56 py-2 text-sm font-medium text-center items-center text-long-custom bg-custom-1 rounded-lg focus:outline-none dark:bg-[#486997]" value="cubillagonzalo@outlook.com">
@@ -46,31 +41,12 @@ import Tags from '../components/Tags.astro';
       <div class="w-full lg:w-1/2 lg:pr-4 lg:pl-12">
         <h3 class="text-custom font-medium text-2xl lg:mt-0">Skills</h3>
         <div class="mt-8 grid grid-cols-2 md:grid-cols-3 sm:grid-cols-4 lg:gap-6">
-          <Cards>
-            <img slot="svg" src="logos/html.svg" alt="html logo">
-            <span slot="no1">HTML</span>
-
-          </Cards>
-          <Cards>
-            <img slot="svg" src="logos/css.svg" alt="css logo">
-    			  <span slot="no1">CSS</span>
-          </Cards>
-          <Cards>
-            <img slot="svg" src="logos/astro.svg" alt="Astro brand logo">
-            <span slot="no1">Astro</span>
-          </Cards>
-          <Cards>
-            <img slot="svg" src="logos/tailwindcss.svg" alt="tailwind brand logo">
-            <span slot="no1">TailwindCSS</span>
-          </Cards>
-          <Cards>
-            <img slot="svg" src="logos/java.svg" alt="java brand logo">
-            <span slot="no1">Java</span>
-          </Cards>
-          <Cards>
-            <span slot="no1">C++</span>
-            <img slot="svg" src="logos/cpp.svg" alt="c++ logo">
-          </Cards>
+          <Cards src="logos/html.svg" alt="html logo" tech="HTML" />
+          <Cards src="logos/css.svg" alt="css logo" tech="CSS" />
+          <Cards src="logos/astro.svg" alt="Astro brand logo" tech="Astro" />
+          <Cards src="logos/tailwindcss.svg" alt="tailwind brand logo" tech="TailwindCSS" />
+          <Cards src="logos/java.svg" alt="java brand logo" tech="Java" />
+          <Cards src="logos/cpp.svg" alt="c++ logo" tech="C++" />
         </div>
       </div>
     </div>
@@ -80,17 +56,21 @@ import Tags from '../components/Tags.astro';
   <section id="project" class="w-full mx-auto mt-20 md:mt-48 mb-20 md:mb-48 px-4">
     <div class="max-w-4xl mx-auto">
       <h1 class="font-bold text-custom pb-10 text-3xl md:text-5xl text-center">Proyectos</h1>
-      <ProjectCard>
-        <h2 slot="title" class="text-2xl md:text-4xl">Portfolio</h5>
-        <img src="mockup.png" alt="Gonzalo Demian Cubilla portfolio" slot="imgDesc" class="w-full md:w-1/2 h-80 object-cover  rounded-md bg-cover mx-auto" />
-        <span slot="descr" class="text-long-custom">El portfolio, actualmente acá! (Prometo agregar mas cosas dentro de poco ಠ﹏ಠ)</span>
-        <ul slot="tags" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-2 md:gap-0 sm:gap-0">
-          <Tags><span slot="tag">HTML</span></Tags>
-          <Tags><span slot="tag">Tailwind CSS</span></Tags>
-          <Tags><span slot="tag">Astro 4</span></Tags>
-          <Tags><span slot="tag">SQLite</span></Tags>
-        </ul>
-      </ProjectCard>
+    <ProjectCard 
+      title="Portfolio" 
+      imgSrc="mockup.png" 
+      imgAlt="Gonzalo Demian Cubilla portfolio" 
+      description="El portfolio, actualmente acá! (Prometo agregar mas cosas dentro de poco ಠ﹏ಠ)" 
+      githubLink="https://github.com/keys4ever/porftolio"
+    >
+    <ul slot="tags" class="flex flex-wrap">
+      <Tags tag="HTMl" />
+      <Tags tag="Tailwind CSS" />
+      <Tags tag="Astro 4" />
+      <Tags tag="SQLite" />
+      </ul>
+    </ProjectCard>
+    
     </div>
   </section>
 
