@@ -8,23 +8,27 @@ import AButton from '../components/AButton.astro';
 
 <Layout title="Inicio">
   <!-- Presentación -->
-  <section>
+  <header>
     <div class="bg-custom w-full max-w-4xl mt-32 p-8 md:p-16 mb-32 rounded-xl mx-auto text-center border-solid border-[3px] border-[#1f2d40]">
       <img src="yo.jpeg" loading="lazy" alt="Gonzalo Demian Cubilla" class="rounded-full w-24 h-[84px] md:w-60 md:h-60 mx-auto">
-      <h1 class="text-custom mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">Gonzalo D<span class="text-white">.</span> Cubilla</h1>
+      <h1 class="mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-custom">Gonzalo D<span class="text-bunker-200">.</span> Cubilla</h1>
       <p class="text-long-custom pt-5 font-bold text-lg md:text-xl p-4 md:p-10">Programador sin un enfoque específico - estoy estudiando la carrera de Tecnicatura Universitaria en Programación</p>
       <div class="flex flex-col md:flex-row items-center justify-center pb-10 space-y-4 md:space-y-0 md:space-x-4">
         <AButton src="/logos/github.png" href="https://github.com/Keys4Ever" alt="github brand logo" buttonName="GitHub" />
         <AButton src="/logos/whatsapp.png" href="https://wa.me/5491137018186" alt="whatsapp brand logo" buttonName="Whatsapp" />
       </div>
-    <div class="inline-flex ml-10">
-      <input type="text" id="copy" class="px-3 w-56 py-2 text-sm font-medium text-center items-center text-long-custom bg-custom-1 rounded-lg focus:outline-none dark:bg-[#486997]" value="cubillagonzalo@outlook.com">
-      <button id="mail" class="p-1 ml-2 bg-custom-1 rounded-lg hover:bg-[#3b567c] focus:ring-2 focus:outline-none focus:ring-sky-300 dark:bg-[#486997] dark:hover:bg-sky-700 dark:focus:ring-sky-800">
-        <img src="logos/copy.svg">
-      </button>
+      <div class="flex justify-center items-center">
+        <div class="relative w-[17rem]">
+          <input id="copy" type="text" class="bg-custom-1 text-slate-300 w-full text-sm rounded-lg block px-2.5 py-4" value="cubillagonzalo@outlook.com">
+          <button id="mail" class="absolute right-2.5 top-1/2 -translate-y-1/2 rounded-lg py-2 px-2.5 inline-flex items-center justify-center border border-custom bg-[#24364f] hover:bg-[#2d415e] ">
+            <img src="logos/copy.svg" class="w-3 h-3">
+            <span class="text-long-custom text-xs">Copy</span>
+          </button>
+        </div>
+      </div>
     </div>
-  </div>
-  </section>
+  </header>
+  
 
   <!-- About me -->
   <section id="about" class="container rounded-xl  mx-auto mt-20 md:mt-60 my-4 border-solid border-[3px] border-[#1f2d40] max-w-4xl">
@@ -63,11 +67,10 @@ import AButton from '../components/AButton.astro';
       description="El portfolio, actualmente acá! (Prometo agregar mas cosas dentro de poco ಠ﹏ಠ)" 
       githubLink="https://github.com/keys4ever/porftolio"
     >
-    <ul slot="tags" class="flex flex-wrap">
-      <Tags tag="HTMl" />
+    <ul slot="tags" class="flex flex-wrap mt-32">
+      <Tags tag="HTML" />
       <Tags tag="Tailwind CSS" />
       <Tags tag="Astro 4" />
-      <Tags tag="SQLite" />
       </ul>
     </ProjectCard>
     
@@ -94,7 +97,7 @@ import AButton from '../components/AButton.astro';
         <textarea class="bg-custom appearance-none border-2 border-[#1f2d40] rounded w-full py-2 px-4 text-long-custom leading-tight focus:border-[#f8ee33]" id="message" name="message" rows="5" required placeholder="Tu mensaje"></textarea>
       </div>
       <div>
-        <button class="bg-custom transition-all hover:w-24 hover:bg-[#3b567c] text-white font-bold py-2 px-4 rounded" type="submit">
+        <button class="bg-custom transition-all hover:scale-105 hover:bg-[#2d415e] text-white font-bold py-2 px-4 mb-2 rounded" type="submit">
           Enviar
         </button>
       </div>
