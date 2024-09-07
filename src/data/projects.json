@@ -1,0 +1,18 @@
+[
+    {
+        "title": "URL Shortener",
+        "imgSrc": "urlshortener.webp",
+        "imgAlt": "KeysURL Main page",
+        "description": "URL Shortener que hice para aprender lo básico de Node.js, y aprender a desplegar aplicaciones mas complejas en vercel",
+        "githubLink": "https://keys.lat",
+        "tags": ["HTML", "Tailwind CSS", "Node JS", "Express"]
+      },
+      {
+        "title": "Portfolio",
+        "imgSrc": "mockup.webp",
+        "imgAlt": "Gonzalo Demian Cubilla portfolio",
+        "description": "El portfolio, actualmente acá! (Prometo agregar mas cosas dentro de poco ಠ﹏ಠ)",
+        "githubLink": "https://github.com/keys4ever/porftolio",
+        "tags": ["HTML", "Tailwind CSS", "Astro 4"]
+      }
+]
