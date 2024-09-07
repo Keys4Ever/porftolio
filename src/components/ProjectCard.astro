@@ -1,10 +1,19 @@
 ---
-  const { title, imgSrc, imgAlt, description, githubLink } = Astro.props;
+export interface Props {
+  title: string;
+  imgSrc: string;
+  imgAlt: string;
+  description: string;
+  githubLink: string;
+  tags: string[];  // Añadido para manejar las etiquetas
+}
+const { title, imgSrc, imgAlt, description, githubLink, tags } = Astro.props;
 ---
+
 <a 
   href={githubLink} 
   target="_blank" 
-  class="bg-custom h-auto w-full max-w-4xl mx-auto border-[3px] border-[#1f2d40] rounded-xl flex flex-col md:flex-row items-stretch md:items-start transition-transform duration-300 transform hover:scale-[1.02] cursor-pointer no-underline group"
+  class="bg-custom h-auto w-full max-w-4xl mx-auto border-[3px] border-[#1f2d40] rounded-xl flex flex-col md:flex-row items-stretch md:items-start transition-transform duration-300 mb-8 transform hover:scale-[1.02] cursor-pointer no-underline group"
 >
   <!-- Imagen a la izquierda -->
   <img src={imgSrc} alt={imgAlt} class="w-full md:w-1/2 h-80 object-cover rounded-md bg-cover mx-auto md:mx-0 md:order-1" />
@@ -19,8 +28,12 @@
       </h2>
       <p class="text-long-custom">{description}</p>
     </div>
-    <slot class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-4 gap-2 mt-4" name="tags">
-        <slot name="tag"></slot>
-    </slot>
+    <ul class="flex flex-wrap mt-4 gap-2">
+      {tags.map(tag => (
+        <li class="text-long-custom bg-gray-800 font-medium px-2 rounded-full text-center text-xs py-[3px]">
+          {tag}
+        </li>
+      ))}
+    </ul>
   </div>
 </a>

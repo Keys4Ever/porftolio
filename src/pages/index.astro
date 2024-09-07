@@ -4,6 +4,26 @@ import Cards from '../components/Cards.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import Tags from '../components/Tags.astro';
 import AButton from '../components/AButton.astro';
+
+const projects: Project[] = [
+  {
+      "title": "URL Shortener",
+      "imgSrc": "urlshortener.webp",
+      "imgAlt": "KeysURL Main page",
+      "description": "URL Shortener que hice para aprender lo básico de Node.js, y aprender a desplegar aplicaciones mas complejas en vercel",
+      "githubLink": "https://keys.lat",
+      "tags": ["HTML", "Tailwind CSS", "Node JS", "Express"]
+    },
+    {
+      "title": "Portfolio",
+      "imgSrc": "mockup.webp",
+      "imgAlt": "Gonzalo Demian Cubilla portfolio",
+      "description": "El portfolio, actualmente acá! (Prometo agregar mas cosas dentro de poco ಠ﹏ಠ)",
+      "githubLink": "https://github.com/keys4ever/porftolio",
+      "tags": ["HTML", "Tailwind CSS", "Astro 4"]
+    }
+];
+
 ---
 
 <Layout title="Inicio">
@@ -60,19 +80,18 @@ import AButton from '../components/AButton.astro';
   <section id="project" class="w-full mx-auto mt-20 md:mt-48 mb-20 md:mb-48 px-4">
     <div class="max-w-4xl mx-auto">
       <h1 class="font-bold text-custom pb-10 text-3xl md:text-5xl text-center">Proyectos</h1>
-    <ProjectCard 
-      title="Portfolio" 
-      imgSrc="mockup.webp" 
-      imgAlt="Gonzalo Demian Cubilla portfolio" 
-      description="El portfolio, actualmente acá! (Prometo agregar mas cosas dentro de poco ಠ﹏ಠ)" 
-      githubLink="https://github.com/keys4ever/porftolio"
-    >
-    <ul slot="tags" class="flex flex-wrap mt-32">
-      <Tags tag="HTML" />
-      <Tags tag="Tailwind CSS" />
-      <Tags tag="Astro 4" />
-      </ul>
-    </ProjectCard>
+    
+
+      {projects.map(project => (
+        <ProjectCard 
+          title={project.title} 
+          imgSrc={project.imgSrc} 
+          imgAlt={project.imgAlt} 
+          description={project.description} 
+          githubLink={project.githubLink}
+          tags={project.tags}
+        />
+      ))}
     
     </div>
   </section>
