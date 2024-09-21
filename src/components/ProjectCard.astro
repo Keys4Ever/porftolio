@@ -13,7 +13,7 @@ const { title, imgSrc, imgAlt, description, githubLink, tags } = Astro.props;
 <a 
   href={githubLink} 
   target="_blank" 
-  class="bg-custom h-auto w-full max-w-4xl mx-auto border-[3px] border-[#1f2d40] rounded-xl flex flex-col md:flex-row items-stretch md:items-start transition-transform duration-300 mb-8 transform hover:scale-[1.02] cursor-pointer no-underline group"
+  class="bg-card-background h-auto w-full max-w-4xl mx-auto border-[3px] border-card-border rounded-xl flex flex-col md:flex-row items-stretch md:items-start transition-transform duration-300 mb-8 transform hover:scale-[1.02] cursor-pointer no-underline group"
 >
   <!-- Imagen a la izquierda -->
   <img src={imgSrc} alt={imgAlt} class="w-full md:w-1/2 h-80 object-cover rounded-md bg-cover mx-auto md:mx-0 md:order-1" />
@@ -22,15 +22,15 @@ const { title, imgSrc, imgAlt, description, githubLink, tags } = Astro.props;
   <div class="flex-1 p-4 md:order-2 flex flex-col justify-between">
     <div class="font-medium text-ellipsis mb-4 grid grid-cols-1 gap-4">
       <!-- Título y logo juntos en línea -->
-      <h2 class="text-2xl md:text-4xl mb-2 flex items-center text-long-custom transition-colors duration-300 group-hover:text-[#f8ee33]">
+      <h2 class="text-2xl md:text-4xl mb-2 flex items-center underline text-text-secondary transition-colors duration-300 group-hover:text-text-primary">
         {title} 
-        <svg class="inline-block ml-2 w-8 h-8 text-long-custom group-hover:text-[#f8ee33]" stroke="#fff" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="ml-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>
+        <svg class="inline-block ml-2 w-8 h-8 text-text-secondary group-hover:text-text-primary" stroke="#fff" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" class="ml-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m13 3 3.293 3.293-7 7 1.414 1.414 7-7L21 11V3z"></path><path d="M19 19H5V5h7l-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2v-5l-2-2v7z"></path></svg>
       </h2>
-      <p class="text-long-custom">{description}</p>
+      <p class="text-text-secondary">{description}</p>
     </div>
     <ul class="flex flex-wrap mt-4 gap-2">
       {tags.map(tag => (
-        <li class="text-long-custom bg-gray-800 font-medium px-2 rounded-full text-center text-xs py-[3px]">
+        <li class="text-text-secondary bg-tech font-medium px-2 rounded-full text-center text-xs py-[3px]">
           {tag}
         </li>
       ))}

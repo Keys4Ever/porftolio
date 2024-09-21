@@ -2,14 +2,7 @@
 
 const {src,alt,tech} = Astro.props;
 ---
-<div id="logo" class="text-custom p-2 bg-bunker-800/10 rounded-lg flex flex-col items-center justify-center">
+<div id="logo" class="text-text-primary p-2 bg-tech rounded-lg flex flex-col items-center justify-center">
     <img src={src} alt={alt}>
-    <h5 class="text-sm lg:text-md font-medium mt-3 text-long-custom">{tech}</h5>
+    <h5 class="text-sm lg:text-md font-medium mt-3 text-text-secondary">{tech}</h5>
 </div>
-
-
-<style>
-    .bg-bunker-800\/10{
-		background-color: rgba(46,53,65,.1);
-	}
-</style>
