@@ -14,7 +14,7 @@ import projects from '../data/projects.json';
     <div class="bg-card-background w-full max-w-4xl mt-32 p-8 md:p-16 mb-32 rounded-xl mx-auto text-center border-solid border-[3px] border-card-border">
       <img src="yo.jpeg" loading="lazy" alt="Gonzalo Demian Cubilla" class="rounded-full w-24 h-[84px] md:w-60 md:h-60 mx-auto">
       <h1 class="mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary">Gonzalo D<span class="text-text-muted">.</span> Cubilla</h1>
-      <p class="text-text-secondary pt-5 font-bold text-lg md:text-xl p-4 md:p-10">Programador sin un enfoque específico - estoy estudiando la carrera de Tecnicatura Universitaria en Programación</p>
+      <p class="text-text-secondary pt-5 font-bold text-lg md:text-xl p-4 md:p-10">Web Developer - estoy estudiando la carrera de Tecnicatura Universitaria en Programación</p>
       <div class="flex flex-col md:flex-row items-center justify-center pb-10 space-y-4 md:space-y-0 md:space-x-4">
         <AButton src="/logos/github.png" href="https://github.com/Keys4Ever" alt="github brand logo" buttonName="GitHub" />
         <AButton src="/logos/whatsapp.png" href="https://wa.me/5491137018186" alt="whatsapp brand logo" buttonName="Whatsapp" />
@@ -71,6 +71,7 @@ import projects from '../data/projects.json';
           imgAlt={project.imgAlt} 
           description={project.description} 
           githubLink={project.githubLink}
+          projectLink={project.projectLink}
           tags={project.tags}
         />
       ))}
