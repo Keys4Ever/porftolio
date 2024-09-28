@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Cards from '../components/Cards.astro';
+import technologies from '../data/technologies.json';
 import ProjectCard from '../components/ProjectCard.astro';
 import Tags from '../components/Tags.astro';
 import AButton from '../components/AButton.astro';
@@ -46,13 +47,14 @@ import projects from '../data/projects.json';
       <div class="w-full lg:w-1/2 lg:pr-4 lg:pl-12">
         <h3 class="text-text-primary font-medium text-2xl lg:mt-0">Skills</h3>
         <div class="mt-8 grid grid-cols-2 md:grid-cols-3 sm:grid-cols-4 lg:gap-6">
-          <Cards src="logos/html.svg" alt="html logo" tech="HTML" />
-          <Cards src="logos/css.svg" alt="css logo" tech="CSS" />
-          <Cards src="logos/astro.svg" alt="Astro brand logo" tech="Astro" />
-          <Cards src="logos/tailwindcss.svg" alt="tailwind brand logo" tech="TailwindCSS" />
-          <Cards src="logos/javascript.svg" alt="java brand logo" tech="Javascript" />
-          <Cards src="logos/node.svg" alt="nodejs brand logo" tech="Node.js" />
-          <Cards src="logos/cpp.svg" alt="c++ logo" tech="C++" />
+
+          {technologies.map(technology=>(
+            <Cards 
+            src={technology.src} 
+            alt={technology.alt} 
+            tech={technology.tech}
+            />
+          ))}
         </div>
       </div>
     </div>

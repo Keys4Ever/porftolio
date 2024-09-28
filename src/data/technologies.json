@@ -1,0 +1,38 @@
+[
+    {
+      "src": "logos/html.svg",
+      "alt": "html logo",
+      "tech": "HTML"
+    },
+    {
+      "src": "logos/css.svg",
+      "alt": "css logo",
+      "tech": "CSS"
+    },
+    {
+      "src": "logos/astro.svg",
+      "alt": "Astro brand logo",
+      "tech": "Astro"
+    },
+    {
+      "src": "logos/tailwindcss.svg",
+      "alt": "tailwind brand logo",
+      "tech": "TailwindCSS"
+    },
+    {
+      "src": "logos/javascript.svg",
+      "alt": "java brand logo",
+      "tech": "Javascript"
+    },
+    {
+      "src": "logos/node.svg",
+      "alt": "nodejs brand logo",
+      "tech": "Node.js"
+    },
+    {
+      "src": "logos/cpp.svg",
+      "alt": "c++ logo",
+      "tech": "C++"
+    }
+  ]
+  
