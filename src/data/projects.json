@@ -12,7 +12,7 @@
         "title":"Manga Library",
         "imgSrc":"mangaLibrary.webp",
         "imgAlt":"Manga Library - Chrome Extension",
-        "description":"En esta extensión de chrome que hice en conjunto con un amigo me encargué tanto de desarrollar el frontend como de desarrollara la lógica de la que partimos de base para el proyecto. También me encargué de la corrección de diversos errores y mantenimiento del código, también aporté valor con mis ideas únicas que trajeron funciones claves al proyecto.",
+        "description":"En esta extensión de chrome que hice en conjunto con un amigo me encargué tanto de desarrollar el frontend como de desarrollar la lógica de la que partimos de base para el proyecto. También me encargué de la corrección de diversos errores y mantenimiento del código, también aporté valor con mis ideas únicas que trajeron funciones claves al proyecto.",
         "projectLink":"https://chromewebstore.google.com/detail/manga-library/agdepjcnhljkjcnnmanbooinhoaieidc",
         "githubLink":"https://github.com/Kosmosama/Manga-Extension",
         "tags":["HTML","Tailwind CSS","Javascript"]
