@@ -22,10 +22,11 @@ import projects from '../data/projects.json';
       </div>
       <div class="w-full max-w-[16rem] mx-auto">
         <div class="relative">
-            <input id="copy" type="text" class="bg-button-background text-text-muted w-full text-sm rounded-lg block p-2.5" value="cubillagonzalo@outlook.com" disabled readonly>
-            <button id="mail" class="absolute end-2 top-1/2 -translate-y-1/2 text-text-secondary hover:bg-button-highlight rounded-lg p-2 inline-flex items-center justify-center">
+          <label for="mailText" class="hidden">Email Text</label>
+            <input name="mailText" id="copy" type="text" class="bg-button-background text-text-muted w-full text-sm rounded-lg block p-2.5" value="cubillagonzalo@outlook.com" disabled readonly>
+            <button id="mail" class="absolute end-2 top-1/2 -translate-y-1/2 text-text-secondary hover:bg-button-highlight rounded-lg p-2 inline-flex items-center justify-center" aria-label="Copy button">
                 <span id="default-icon">
-                    <img src="logos/copy.svg" class="w-3.5 h-3.5">
+                    <img src="logos/copy.svg" alt="Copy svg image" class="w-3.5 h-3.5">
                 </span>
                 <span id="success-icon" class="hidden inline-flex items-center">
                     <svg class="w-3.5 h-3.5 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
