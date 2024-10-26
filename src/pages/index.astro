@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Cards from '../components/Cards.astro';
 import technologies from '../data/technologies.json';
-import ProjectCard from '../components/ProjectCard.astro';
-import Tags from '../components/Tags.astro';
+import ProjectCard from '../components/ProjectCard.tsx';
+import Tags from '../components/Tags.tsx';
 import AButton from '../components/AButton.astro';
 import projects from '../data/projects.json';
 
@@ -14,8 +14,8 @@ import projects from '../data/projects.json';
   <header>
     <div class="bg-card-background w-full max-w-4xl mt-32 p-8 md:p-16 mb-32 rounded-xl mx-auto text-center border-solid border-[3px] border-card-border">
       <img src="yo.jpeg" loading="lazy" alt="Gonzalo Demian Cubilla" class="rounded-full w-24 h-[84px] md:w-60 md:h-60 mx-auto">
-      <h1 class="mb-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary">Gonzalo D<span class="text-text-muted">.</span> Cubilla</h1>
-      <p class="text-text-secondary pt-5 font-bold text-lg md:text-xl p-4 md:p-10">Web Developer - estoy estudiando la carrera de Tecnicatura Universitaria en Programación</p>
+      <h1 class="mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary">Gonzalo D<span class="text-text-muted">.</span> Cubilla</h1>
+      <p class="text-text-secondary pt-2 font-bold text-lg md:text-xl p-4 md:p-10">Junior full stack developer</p>
       <div class="flex flex-col md:flex-row items-center justify-center pb-10 space-y-4 md:space-y-0 md:space-x-4">
         <AButton src="/logos/github.png" href="https://github.com/Keys4Ever" alt="github brand logo" buttonName="GitHub" />
         <AButton src="/logos/whatsapp.png" href="https://wa.me/5491137018186" alt="whatsapp brand logo" buttonName="Whatsapp" />
@@ -50,8 +50,8 @@ import projects from '../data/projects.json';
       <div class="w-full lg:w-1/2 lg:pl-4 lg:pr-12 mb-8 lg:mb-0">
         <h2 class="text-text-primary font-medium text-2xl">Sobre Mí</h2>
         <div class="mt-8 space-y-6 text-text-secondary">
-          <p>Soy Gonzalo Demian Cubilla, un estudiante argentino de 18 años. Actualmente, estudio programación en la Universidad Tecnológica Nacional (UTN).</p>
-          <p>Manejo HTML, CSS y Tailwind CSS para diseñar interfaces web. También estoy explorando el desarrollo web con Astro y el backend con NodeJS.</p>
+          <p>Soy Gonzalo Demian Cubilla, vivo en Argentina y tengo 18 años. Actualmente, curso programación en la Universidad Tecnológica Nacional (UTN).</p>
+          <p>Manejo HTML, CSS y Tailwind CSS para diseñar interfaces web. También estoy explorando el desarrollo web frontend con React y el backend con NodeJS.</p>
           <p>Tengo conocimientos en C++, adquiridos en la universidad. Además, estoy familiarizado con bases de datos LibSQL. Siempre busco oportunidades para crear proyectos que me permitan aprender nuevas tecnologías.</p>
         </div>
       </div>
@@ -78,8 +78,8 @@ import projects from '../data/projects.json';
       <h1 class="font-bold text-text-primary pb-10 text-3xl md:text-5xl text-center">Proyectos</h1>
     
 
-      {projects.map(project => (
-        <ProjectCard 
+      {projects.map((project, index) => ( 
+        <ProjectCard client:load
           title={project.title} 
           imgSrc={project.imgSrc} 
           imgAlt={project.imgAlt} 
@@ -89,14 +89,14 @@ import projects from '../data/projects.json';
           tags={project.tags}
         />
       ))}
-    
+      
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact" class="bg-card-background border-[3px] border-solid border-card-border w-full max-w-4xl pt-10 mt-10 mb-20 rounded-xl mx-auto text-center text-text-primary px-4">
     <h2 class="text-3xl md:text-4xl font-bold mb-5">Contacto</h2>
-    <p class="mb-5 text-text-secondary">Si tienes alguna pregunta, proyecto o simplemente quieres saludar, no dudes en ponerte en contacto conmigo. Aquí tienes algunas formas en las que puedes hacerlo:</p>
+    <p class="mb-5 text-text-secondary">Funciona a veces xd</p>
     <form class="mx-auto w-full max-w-lg" action="https://formsubmit.co/ed2481fdcfd4cffb505ba62f6c67941d" method="POST">
       <input type="hidden" name="_next" value="https://keys4ever.dev">
       <input type="hidden" name="_captcha" value="false">
