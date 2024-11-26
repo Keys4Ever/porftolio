@@ -63,7 +63,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             src="/logos/github.png" 
             alt="Github Logo" 
             href={githubLink}  
-            className="ml-4" // Asegúrate de agregar margen izquierdo para separar el botón del título
           />
         </div>
         <p className="text-text-secondary mb-4">{description}</p>
