@@ -21,7 +21,7 @@
         "title": "MangaLibrary page",
         "imgSrc": "mangalibweb.png",
         "imgAlt": "Manga Library - Web Page",
-        "description": "Sitio web para la extensión de chrome, donde se pueden ver las distintas versiones de la extensión, para una carga mas sencilla de las versiones utilicé markdowns con astro.",
+        "description": "Sitio web para la extensión de chrome con un diseño responsive sencillo, donde se pueden ver las distintas versiones de la extensión, para una carga mas sencilla de las versiones utilicé markdowns con astro.",
         "projectLink": "https://manga-library.vercel.app/",
         "githubLink":"https://github.com/Keys4Ever/Manga-Library-Web",
         "tags":["HTML", "Tailwind CSS", "Astro", "TypeScript"]
