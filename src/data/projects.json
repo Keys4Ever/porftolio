@@ -19,7 +19,7 @@
       },
       {
         "title": "MangaLibrary page",
-        "imgSrc": "mangalibrweb.png",
+        "imgSrc": "mangalibweb.png",
         "imgAlt": "Manga Library - Web Page",
         "description": "Sitio web para la extensión de chrome, donde se pueden ver las distintas versiones de la extensión, para una carga mas sencilla de las versiones utilicé markdowns con astro.",
         "projectLink": "https://manga-library.vercel.app/",
