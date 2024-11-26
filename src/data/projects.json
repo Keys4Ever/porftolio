@@ -18,12 +18,12 @@
         "tags":["HTML","Tailwind CSS","Javascript"]
       },
       {
-        "title": "Portfolio",
-        "imgSrc": "mockup.webp",
-        "imgAlt": "Gonzalo Demian Cubilla portfolio",
-        "description": "El portfolio, actualmente acá! (Prometo agregar mas cosas dentro de poco ಠ﹏ಠ)",
-        "projectLink":"https://keys4ever.dev",
-        "githubLink": "https://github.com/keys4ever/porftolio",
-        "tags": ["HTML", "Tailwind CSS", "Astro 4"]
+        "title": "MangaLibrary page",
+        "imgSrc": "mangalibrweb.png",
+        "imgAlt": "Manga Library - Web Page",
+        "description": "Sitio web para la extensión de chrome, donde se pueden ver las distintas versiones de la extensión, para una carga mas sencilla de las versiones utilicé markdowns con astro.",
+        "projectLink": "https://manga-library.vercel.app/",
+        "githubLink":"https://github.com/Keys4Ever/Manga-Library-Web",
+        "tags":["HTML", "Tailwind CSS", "Astro", "TypeScript"]
       }
 ]
