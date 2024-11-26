@@ -18,7 +18,7 @@
         "tags":["HTML","Tailwind CSS","Javascript"]
       },
       {
-        "title": "MangaLibrary page",
+        "title": "MangaLibrary Web",
         "imgSrc": "mangalibweb.png",
         "imgAlt": "Manga Library - Web Page",
         "description": "Sitio web para la extensión de chrome con un diseño responsive sencillo, donde se pueden ver las distintas versiones de la extensión, para una carga mas sencilla de las versiones utilicé markdowns con astro.",
